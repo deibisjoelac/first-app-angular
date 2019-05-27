@@ -1,0 +1,30 @@
+<div class="col-md-5">
+	<div class="card ">
+		<div class="card-body ">
+			<h5 class="card-title mb-4">Mis Contactos</h5>
+			<div class="table">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Nombre</th>
+						<th>Teléfono</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr  *ngFor="let contacto of contactos">
+						<td>{{contacto.id}}</td>
+						<td>{{contacto.nombre}}</td>
+						<td>{{contacto.telefono}}</td>
+						<td>
+							<a routerLink="/detalle/{{contacto.id}}">
+								<i class="fa fa-edit text-primary font-weight-bold"></i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</div>
+		</div>
+	</div>
+</div>
+
+
